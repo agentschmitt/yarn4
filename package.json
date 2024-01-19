@@ -1,6 +1,5 @@
 {
   "name": "yarn4",
-  "packageManager": "yarn@4.0.2",
   "volta": {
     "node": "18.19.0",
     "yarn": "4.0.2"
