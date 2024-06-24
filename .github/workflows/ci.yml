@@ -34,7 +34,7 @@ jobs:
     #shows warning cause packageManager is not set in package.json but works
     - run: |
         corepack enable
-        corepack install -g yarn@4.0.2
+        corepack install -g yarn@4.x
     - uses: actions/cache@v4
       id: node_modules_cache
       with:
