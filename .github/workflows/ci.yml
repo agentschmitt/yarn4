@@ -21,6 +21,7 @@ jobs:
     - run: node --version
     - run: yarn --version
     - run: yarn install --frozen-lockfile
+    - run: git status
 
   corepack:
     name: corepack build
@@ -44,6 +45,7 @@ jobs:
     - run: node --version
     - run: yarn --version
     - run: yarn install --frozen-lockfile
+    - run: git status
 
   yarn:
     name: yarn build
@@ -65,4 +67,5 @@ jobs:
         restore-keys: ${{ runner.os }}-node_modules-
     - run: node --version
     - run: yarn --version
-    - run: yarn install --frozen-lockfile    
+    - run: yarn install --frozen-lockfile
+    - run: git status
