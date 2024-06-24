@@ -10,6 +10,7 @@ jobs:
     timeout-minutes: 10
     steps:
     - uses: actions/checkout@v4
+    #fails pretty often cause of network errors by download of yarn
     - uses: volta-cli/action@v4
     - uses: actions/cache@v4
       id: node_modules_cache
@@ -30,6 +31,7 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: 18.x
+    #shows warning cause packageManager is not set in package.json but works
     - run: |
         corepack enable
         corepack install -g yarn@4.0.2
@@ -52,6 +54,7 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: 18.x
+    # modifies package.json and .yarnrc.yml which is not cool bot works...
     - run: |
         yarn set version 4.0.2
     - uses: actions/cache@v4
