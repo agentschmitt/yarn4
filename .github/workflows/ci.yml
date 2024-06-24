@@ -20,7 +20,7 @@ jobs:
         restore-keys: ${{ runner.os }}-node_modules-
     - run: node --version
     - run: yarn --version
-    - run: yarn install --frozen-lockfile
+    - run: yarn install --immutable
     - run: git status
 
   corepack:
@@ -44,7 +44,7 @@ jobs:
         restore-keys: ${{ runner.os }}-node_modules-
     - run: node --version
     - run: yarn --version
-    - run: yarn install --frozen-lockfile
+    - run: yarn install --immutable
     - run: git status
 
   yarn:
@@ -67,5 +67,5 @@ jobs:
         restore-keys: ${{ runner.os }}-node_modules-
     - run: node --version
     - run: yarn --version
-    - run: yarn install --frozen-lockfile
+    - run: yarn install --immutable
     - run: git status
